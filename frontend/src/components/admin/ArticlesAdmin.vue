@@ -133,7 +133,7 @@ export default {
 		  this.articles = res.data.data
 			this.count = res.data.count
 			this.limit = res.data.limit
-	 
+  
 	  })
     },
     reset() {
@@ -153,8 +153,8 @@ export default {
         .catch(showError);
     },
     remove() {
-	  const id = this.article.data
-	 console.log(id);
+	  const id = this.article.id
+	 
       axios.delete(`${baseApiUrl}/articles/${id}`)
         .then(() => {
           this.$toasted.global.defaultSuccess();
@@ -163,6 +163,7 @@ export default {
         .catch(showError);
     },
     loadArticle(article, mode = "save") {
+      console.log(article.id);
       this.mode = mode;
 	  axios.get(`${baseApiUrl}/articles/${article.id}`)
 	  	.then(res => this.article = res.data)

@@ -8,7 +8,7 @@
             <b-tab title="Artigos" active>
               <ArticlesAdmin/>
             </b-tab>
-            <b-tab title="categorias">
+            <b-tab title="Categorias">
               <CategoryAdmin/>
             </b-tab>
             <b-tab title="Usuários">
