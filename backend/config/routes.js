@@ -38,7 +38,7 @@ module.exports = app =>{
 
   app.route('/articles/:id')
     .all(app.config.passport.authenticate())
-    .get(app.api.article.get)
+    .get(app.api.article.getById)
     .put(admin(app.api.article.save))
     .delete(admin(app.api.article.remove))
 
